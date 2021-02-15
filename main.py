@@ -15,16 +15,14 @@ tt = Twitter( {
 frasador = Frasador()
 imagemzador = Imagemzador()
 
-print( 'Bot Running' )
-
-post()
-loop = setInterval( post, 3600 )
-
-
-
 def post ():
     phrase = frasador.genPhrase()
     print( phrase )
     imagemzador.generateWithText( phrase )
     tt.postImage( './data/out.jpg' )
     imagemzador.clearOutput()
+
+print( 'Bot Running' )
+
+post()
+loop = setInterval( post, 3600 )
