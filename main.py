@@ -19,10 +19,10 @@ def post ():
     phrase = frasador.genPhrase()
     print( phrase )
     imagemzador.generateWithText( phrase )
-    tt.postImage( './data/out.jpg' )
+    # tt.postImage( './data/out.jpg' )
     imagemzador.clearOutput()
 
 print( 'Bot Running' )
 
 post()
-loop = setInterval( post, 3600 )
+loop = setInterval( post, 60*60*int(os.getenv( 'hour_interval' )) )
