@@ -12,9 +12,15 @@ tt = Twitter( {
     'access_token': os.getenv( 'access_token' ),
     'token_secret': os.getenv( 'token_secret' ),
 } )
-
 frasador = Frasador()
 imagemzador = Imagemzador()
+
+print( 'Bot Running' )
+
+post()
+loop = setInterval( post, 3600 )
+
+
 
 def post ():
     phrase = frasador.genPhrase()
@@ -22,8 +28,3 @@ def post ():
     imagemzador.generateWithText( phrase )
     tt.postImage( './data/out.jpg' )
     imagemzador.clearOutput()
-
-post()
-loop = setInterval( post, 3600 )
-
-print( 'Bot Running' )
