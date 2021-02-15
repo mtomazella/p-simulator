@@ -16,11 +16,14 @@ frasador = Frasador()
 imagemzador = Imagemzador()
 
 def post ():
-    phrase = frasador.genPhrase()
-    print( phrase )
-    imagemzador.generateWithText( phrase )
-    tt.postImage( './data/out.jpg' )
-    imagemzador.clearOutput()
+    try:
+        phrase = frasador.genPhrase()
+        print( phrase )
+        imagemzador.generateWithText( phrase )
+        tt.postImage( './data/out.jpg' )
+        imagemzador.clearOutput()
+    except:
+        print( 'Post Failed' )
 
 print( 'Bot Running' )
 
