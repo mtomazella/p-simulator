@@ -19,7 +19,7 @@ def post ():
     phrase = frasador.genPhrase()
     print( phrase )
     imagemzador.generateWithText( phrase )
-    # tt.postImage( './data/out.jpg' )
+    tt.postImage( './data/out.jpg' )
     imagemzador.clearOutput()
 
 print( 'Bot Running' )
