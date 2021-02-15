@@ -9,7 +9,8 @@ class Imagemzador:
     def generateWithText ( self, text ):
         image = cv.imread( self.inputPath )
         if image is None:
-            return False
+            print( 'fudeu fião' )
+            return None
         cv.putText( image, text, org=(37,68), fontFace=cv.FONT_HERSHEY_DUPLEX, fontScale=0.45, color=(10,10,10), thickness=1, lineType=cv.LINE_AA )
         cv.imwrite( self.outputPath + '/out.jpg', image )
 
