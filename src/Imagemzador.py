@@ -11,6 +11,8 @@ class Imagemzador:
         if image is None:
             print( 'fudeu fião' )
             return None
+        else:
+            print( image )
         cv.putText( image, text, org=(37,68), fontFace=cv.FONT_HERSHEY_DUPLEX, fontScale=0.45, color=(10,10,10), thickness=1, lineType=cv.LINE_AA )
         cv.imwrite( self.outputPath + '/out.jpg', image )
 
