@@ -7,8 +7,8 @@ from src.set_interval import setInterval
 from src.Imagemzador import Imagemzador
 
 tt = Twitter( { 
-    'consumer_key': os.getenv( 'CONSUMER_KEY' ), 
-    'consumer_secret': os.getenv( 'CONSUMER_SECRET' ),
+    'consumer_key': os.getenv( 'consumer_key' ), 
+    'consumer_secret': os.getenv( 'consumer_secret' ),
     'access_token': os.getenv( 'access_token' ),
     'token_secret': os.getenv( 'token_secret' ),
 } )

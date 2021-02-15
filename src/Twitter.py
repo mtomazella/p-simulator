@@ -2,10 +2,10 @@ import tweepy
 
 class Twitter:
     def __init__ ( self, auth = { 'consumer_key': '', 'consumer_secret': '', 'access_token': '', 'token_secret': '' } ):
-        print( auth['consumer_key'] )
-        print( auth['consumer_secret'] )
-        print( auth['access_token'] )
-        print( auth['token_secret'] )
+        # print( auth['consumer_key'] )
+        # print( auth['consumer_secret'] )
+        # print( auth['access_token'] )
+        # print( auth['token_secret'] )
         self.auth = tweepy.OAuthHandler( auth['consumer_key'], auth['consumer_secret'] )
         self.auth.set_access_token( auth['access_token'], auth['token_secret'] )
         self.api  = tweepy.API( self.auth )
