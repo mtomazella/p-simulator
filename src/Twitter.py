@@ -18,4 +18,5 @@ class Twitter:
         self.api.update_status( text )
 
     def postImage ( self, imagePath, subtitle = '' ):
+        print( imagePath, subtitle )
         self.api.update_with_media( imagePath, status = subtitle )
