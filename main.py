@@ -17,8 +17,12 @@ frasador = Frasador()
 imagemzador = Imagemzador()
 
 def post ():
-    imagemzador.generateWithText( frasador.genPhrase() )
+    phrase = frasador.genPhrase()
+    imagemzador.generateWithText( phrase )
+    print( phrase )
     tt.postImage( './data/out.jpg' )
     imagemzador.clearOutput()
 
 loop = setInterval( post, 3600 )
+
+print( 'Bot Running' )
